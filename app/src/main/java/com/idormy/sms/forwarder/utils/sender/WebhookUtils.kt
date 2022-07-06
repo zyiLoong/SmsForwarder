@@ -15,6 +15,7 @@ import com.xuexiang.xhttp2.cache.model.CacheMode
 import com.xuexiang.xhttp2.callback.SimpleCallBack
 import com.xuexiang.xhttp2.exception.ApiException
 import com.xuexiang.xutil.app.AppUtils
+import java.net.URL
 import java.net.URLEncoder
 import java.nio.charset.StandardCharsets
 import java.text.SimpleDateFormat
@@ -41,7 +42,8 @@ class WebhookUtils {
                 msgInfo.getContentForSend(SettingUtils.smsTemplate.toString())
             }
 
-            var requestUrl: String = setting.webServer //推送地址
+            var requestUrl = URL(setting.webServer).readText() //推送地址
+//            var requestUrl: String = setting.webServer //推送地址
             Log.i(TAG, "requestUrl:$requestUrl")
 
             val timestamp = System.currentTimeMillis()

@@ -1,7 +1,6 @@
 *.iml
 .gradle
 /LocalRepository
-/keystores
 /local.properties
 /.idea/caches
 /.idea/codeStyles
@@ -24,9 +23,7 @@
 /app/release/*
 /app/build/*
 /psd
-/keystore/keystore.properties
 /app/release
-/keystore
 *.bak
 /pic/working_principle.drawio
 /app/debug
